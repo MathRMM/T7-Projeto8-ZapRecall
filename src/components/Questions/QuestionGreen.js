@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export default function QuestionGreen({num}) {
-
     return (
         <Question className="boxQuestion">
           <div>Pergunta {num}</div>

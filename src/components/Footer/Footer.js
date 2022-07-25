@@ -10,19 +10,19 @@ export default function Footer({ answered, num }) {
         if (click == 1) {
             const green = { 'color': '#2FBE34' }
             return (
-                <ion-icon name="checkmark-circle-sharp" style={green} onClick={()=>setFinish(true)}></ion-icon>
+                <ion-icon name="checkmark-circle-sharp" style={green}></ion-icon>
             )
         }
         if (click == 2) {
             const orange = { 'color': '#FF922E' }
             return (
-                <ion-icon name="help-circle-sharp" style={orange} onClick={()=>setFinish(true)}></ion-icon>
+                <ion-icon name="help-circle-sharp" style={orange}></ion-icon>
             )
         }
         if (click == 3) {
             const red = { 'color': '#FF3030' }
             return (
-                <ion-icon name="close-circle-sharp" style={red} onClick={()=>setFinish(true)} ></ion-icon>
+                <ion-icon name="close-circle-sharp" style={red}></ion-icon>
             )
         }
     }
@@ -34,12 +34,13 @@ export default function Footer({ answered, num }) {
             </div>
         )
     }
-  
 
-    if (!finish){
+
+    if (!finish) {
         if (num == answered.length) {
-    setFinish(true) 
-}}
+            setFinish(true)
+        }
+    }
 
     function Final() {
         const result = answered.find((e) => e == 3)
@@ -47,7 +48,7 @@ export default function Footer({ answered, num }) {
             return (
                 <>
                     <p>
-                        <img src={party}/>
+                        <img src={party} />
                         Parabéns!</p>
                     <p>Você não esqueceu de nenhum flashcard!</p>
                 </>
@@ -56,17 +57,16 @@ export default function Footer({ answered, num }) {
             return (
                 <>
                     <p>
-                    <img src={sad}/>
+                        <img src={sad} />
                         Putz...</p>
                     <p>Ainda faltam alguns... Mas não desanime!</p>
                 </>
             )
         }
     }
-console.log(finish)
     return (
         <div className='count'>
-            {finish ? <Final/> : <></>}
+            {finish ? <Final /> : <></>}
             <p> {answered.length}/{num} CONCLUÍDOS</p>
             <Count />
         </div>

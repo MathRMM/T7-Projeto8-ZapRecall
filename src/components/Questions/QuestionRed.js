@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-
 export default function QuestionRed({ num }) {
   return (
     <Question className="boxQuestion">
       <div>Pergunta {num}</div>
-      <ion-icon name="help-circle-sharp"></ion-icon>
+      <ion-icon name="close-circle-outline"></ion-icon>
     </Question>
   )
 }

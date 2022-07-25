@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;700&family=Righteous&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap');
+
+:root {
+    justify-content: flex-start;
+    margin-top: 50px;
+
+    position: relative;
+}
+
+header.flashcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.flashcard img {
+    width: 52px;
+    height: 60px;
+    margin-right: 30px;
+}
+
+header.flashcard h1 {
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 40px;
+    margin-top: 0;
+
+    text-align: center;
+}
+
+.container {
+    margin: 30px 0;
+    margin-bottom: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.count{
+    width: 100%;
+    min-height: 70px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+
+    position: fixed;
+    bottom: 0;
+
+    font-family: 'Recursive', sans-serif;
+    font-size: 18px;
+
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.count p {
+    margin: 5px 0px;
+}
+
+
+
+@media (max-width:400px) {
+
+    .card,
+    .boxQuestion {
+        width: 80vw;
+    }
+
+
+}

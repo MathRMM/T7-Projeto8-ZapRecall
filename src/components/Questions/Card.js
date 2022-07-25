@@ -4,7 +4,6 @@ import { useState } from 'react'
 
 export default function Card({ question, answer, respond , answered , setAnswered}) {
     const [turn, setTurn] = useState(false)
-    console.log(respond)
     
     function CardFront() {
         return (
@@ -40,9 +39,6 @@ export default function Card({ question, answer, respond , answered , setAnswere
             </div>
         )
     }
-
-
-
     return (
         <>
         {turn ? <CardBack/>:<CardFront/>}
